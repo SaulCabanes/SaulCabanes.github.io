@@ -12,19 +12,8 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   site: 'https://SaulCabanes.github.io',
   integrations: [react(), markdoc(), keystatic()],
-
   vite: {
     plugins: [tailwindcss()],
-    optimizeDeps: {
-      include: ["@keystatic/core", "@keystatic/astro"],
-    },
   },
-
-  output: "server",
-
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  // Eliminamos 'output: server' y el adaptador de Vercel
 });

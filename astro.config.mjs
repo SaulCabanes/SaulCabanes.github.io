@@ -40,6 +40,8 @@ const { SITE_URL } = loadEnv(process.env.NODE_ENV || 'production', process.cwd()
  * @see https://astro.build/config
  */
 export default defineConfig({
+  site: 'https://SaulCabanes.github.io',
+})
   /**
    * Output mode: Static Site Generation (SSG)
    * 

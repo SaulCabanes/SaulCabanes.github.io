@@ -40,8 +40,7 @@ const { SITE_URL } = loadEnv(process.env.NODE_ENV || 'production', process.cwd()
  * @see https://astro.build/config
  */
 export default defineConfig({
-  site: 'https://SaulCabanes.github.io',
-})
+ 
   /**
    * Output mode: Static Site Generation (SSG)
    * 
@@ -73,7 +72,7 @@ export default defineConfig({
    * 
    * Set SITE_URL in your .env file (e.g., https://example.com)
    */
-  site: SITE_URL || 'https://example.com',
+  site: SITE_URL || 'https:SaulCabanes.github//.io',
   
   /**
    * Environment variables schema (Astro v5+)
@@ -89,16 +88,16 @@ export default defineConfig({
   env: {
     schema: {
       // Site configuration
-      SITE_URL: envField.string({ context: 'client', access: 'public', default: 'https://example.com' }),
-      SITE_LANGUAGE: envField.string({ context: 'client', access: 'public', default: 'en' }),
-      SITE_TITLE: envField.string({ context: 'client', access: 'public', default: 'Professional Portfolio' }),
-      SITE_DESCRIPTION: envField.string({ context: 'client', access: 'public', default: 'Engineering leader specializing in system architecture, technical decision-making, and delivering measurable business impact.' }),
+      SITE_URL: envField.string({ context: 'client', access: 'public', default: 'https://SaulCabanes.github.io' }),
+      SITE_LANGUAGE: envField.string({ context: 'client', access: 'public', default: 'es' }),
+      SITE_TITLE: envField.string({ context: 'client', access: 'public', default: 'Estudiante de aplicaciones web' }),
+      SITE_DESCRIPTION: envField.string({ context: 'client', access: 'public', default: 'Soy un futuro desarrollador web que divide su tiempo entre el código y el mundo laboral. Me motiva seguir creciendo profesionalmente y aplicar todo lo que aprendo en DAW para crear soluciones que funcionen y aporten valor.' }),
       
       // Author information
-      SITE_AUTHOR_NAME: envField.string({ context: 'client', access: 'public', default: 'Your Name' }),
-      SITE_AUTHOR_TITLE: envField.string({ context: 'client', access: 'public', default: 'Senior Software Engineer' }),
-      SITE_AUTHOR_BIO: envField.string({ context: 'client', access: 'public', default: 'Engineering leader focused on solving complex technical challenges through thoughtful architecture and pragmatic trade-off analysis.' }),
-      SITE_AUTHOR_EMAIL: envField.string({ context: 'client', access: 'public', default: 'hello@example.com' }),
+      SITE_AUTHOR_NAME: envField.string({ context: 'client', access: 'public', default: 'Saul Cabanes' }),
+      SITE_AUTHOR_TITLE: envField.string({ context: 'client', access: 'public', default: 'Estudiate de Desarrollo de Aplicaciones WEB' }),
+      SITE_AUTHOR_BIO: envField.string({ context: 'client', access: 'public', default: 'Actualmente estudio DAW y trabajo de forma simultánea, lo que me permite aplicar directamente lo que aprendo en entornos reales. Soy una persona curiosa, organizada y siempre dispuesta a meterme en nuevos líos de código.' }),
+      SITE_AUTHOR_EMAIL: envField.string({ context: 'client', access: 'public', default: 'saul.c.vila@gmail.com' }),
       SITE_AUTHOR_LOCATION: envField.string({ context: 'client', access: 'public', default: '' }),
       
       // Social media links (empty string = hidden)
